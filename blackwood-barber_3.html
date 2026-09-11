@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blackwood Barber — Barbearia de Alto Padrão</title>
+<meta name="description" content="Blackwood Barber: barbearia masculina de alto padrão. Cortes, barba e cuidado pessoal com precisão, tradição e um ambiente exclusivo.">
+<meta name="keywords" content="barbearia, barbearia masculina, corte masculino, barba, barbearia premium">
+<meta property="og:title" content="Blackwood Barber — Barbearia de Alto Padrão">
+<meta property="og:description" content="Não é apenas um corte. É o seu momento.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:locale" content="pt_BR" id="ogLocale">
+<meta property="og:url" content="https://www.blackwoodbarber.com.br/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0a'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='%23b08d57' font-family='Georgia'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0a0a0a;
+    --charcoal:#151412;
+    --panel:#1b1a17;
+    --ivory:#ece8df;
+    --ivory-dim:#b9b5aa;
+    --gold:#b08d57;
+    --gold-light:#cda86e;
+    --gold-dim:rgba(176,141,87,0.35);
+    --line:rgba(236,232,223,0.12);
+    --ff-display:'Bodoni Moda', Georgia, serif;
+    --ff-body:'Inter', -apple-system, sans-serif;
+    --container:1180px;
+    --ease:cubic-bezier(.16,.8,.24,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{
+    scroll-behavior:smooth;
+    width:100%;
+    overflow-x:hidden;
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+  body{
+    background:var(--black);
+    color:var(--ivory);
+    font-family:var(--ff-body);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+    position:relative;
+  }
+  img{display:block;max-width:100%;height:auto;object-fit:cover;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  button{font-family:inherit;cursor:pointer;}
+  .wrap{max-width:var(--container);margin:0 auto;padding:0 32px;}
+  @media (max-width:480px){.wrap{padding:0 20px;}}
+  h1,h2,h3,h4{font-family:var(--ff-display);font-weight:500;line-height:1.15;letter-spacing:0.2px;}
+  .rule{width:44px;height:1px;background:var(--gold);border:none;}
+  .rule--center{margin:0 auto;}
+  ::selection{background:var(--gold);color:var(--black);}
+
+  /* Focus visibility */
+  a:focus-visible, button:focus-visible{outline:1px solid var(--gold); outline-offset:4px;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    padding:26px 0;
+    transition:padding .4s var(--ease), background .4s var(--ease), border-color .4s var(--ease);
+    border-bottom:1px solid transparent;
+  }
+  header.scrolled{
+    padding:16px 0;
+    background:rgba(10,10,10,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  header .wrap{display:flex;align-items:center;justify-content:space-between;}
+  .logo{display:flex;align-items:center;gap:12px;}
+  .logo-mark{width:34px;height:34px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .logo-mark span{font-family:var(--ff-display);color:var(--gold);font-size:17px;}
+  .logo-word{font-family:var(--ff-display);font-size:19px;letter-spacing:1.5px;color:var(--ivory);}
+  .logo-word b{color:var(--gold);font-weight:500;}
+
+  nav.primary-nav ul{display:flex;gap:38px;align-items:center;}
+  nav.primary-nav a{font-size:14px;color:var(--ivory-dim);position:relative;padding:4px 0;transition:color .3s;}
+  nav.primary-nav a:not(.btn):hover{color:var(--ivory);}
+  nav.primary-nav a:not(.btn)::after{
+    content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);
+    transition:width .35s var(--ease);
+  }
+  nav.primary-nav a:not(.btn):hover::after{width:100%;}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:13px 26px;font-size:13.5px;letter-spacing:.4px;
+    border:1px solid var(--gold);
+    transition:background .35s var(--ease), color .35s var(--ease), border-color .35s var(--ease);
+    white-space:nowrap;
+  }
+  .btn--solid{background:var(--gold);color:var(--black);}
+  .btn--solid:hover{background:var(--gold-light);border-color:var(--gold-light);}
+  .btn--ghost{background:transparent;color:var(--ivory);border-color:var(--line);}
+  .btn--ghost:hover{border-color:var(--gold);color:var(--gold-light);}
+
+  .header-right{display:flex;align-items:center;gap:30px;}
+
+  .lang-switch{display:flex;align-items:center;gap:2px;position:relative;z-index:120;}
+  .lang-btn{background:none;border:none;color:var(--ivory-dim);padding:10px 6px;font-size:12.5px;letter-spacing:.5px;transition:color .3s;min-height:44px;}
+  .lang-btn.active{color:var(--gold-light);font-weight:600;}
+  .lang-btn:not(.active):hover{color:var(--ivory);}
+  .lang-sep{color:var(--line);font-size:12px;}
+
+  .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:10px;z-index:120;min-width:44px;min-height:44px;align-items:center;justify-content:center;}
+  .nav-toggle span{width:24px;height:1px;background:var(--ivory);transition:transform .3s, opacity .3s;}
+  .nav-toggle.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+  .nav-toggle.open span:nth-child(2){opacity:0;}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;min-height:100vh;display:flex;align-items:flex-end;
+    padding-bottom:88px;
+    isolation:isolate;
+  }
+  .hero-media{position:absolute;inset:0;z-index:-2;}
+  .hero-media img{width:100%;height:100%;}
+  .hero-media::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(10,10,10,.55) 0%, rgba(10,10,10,.35) 38%, rgba(10,10,10,.94) 92%),
+               linear-gradient(90deg, rgba(10,10,10,.75) 0%, rgba(10,10,10,.15) 55%);
+  }
+  .hero .wrap{width:100%;}
+  .hero-content{max-width:640px;}
+  .hero-eyebrow{display:flex;align-items:center;gap:14px;color:var(--gold-light);font-size:13.5px;margin-bottom:26px;letter-spacing:.3px;}
+  .hero-title{
+    font-size:clamp(40px, 6.2vw, 74px);
+    color:var(--ivory);
+    margin-bottom:24px;
+  }
+  .hero-title em{font-style:italic;color:var(--gold-light);}
+  .hero-sub{
+    font-size:17px;color:var(--ivory-dim);max-width:460px;margin-bottom:40px;font-weight:300;
+  }
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:56px;}
+  .hero-trust{display:flex;gap:36px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:24px;max-width:560px;}
+  .hero-trust div{display:flex;flex-direction:column;gap:4px;}
+  .hero-trust strong{font-family:var(--ff-display);font-size:22px;color:var(--gold-light);font-weight:500;}
+  .hero-trust span{font-size:12.5px;color:var(--ivory-dim);}
+
+  .scroll-cue{
+    position:absolute;right:32px;bottom:40px;display:flex;flex-direction:column;align-items:center;gap:10px;
+    color:var(--ivory-dim);font-size:11px;letter-spacing:2px;writing-mode:vertical-rl;
+  }
+  .scroll-cue::after{content:'';display:block;width:1px;height:44px;background:var(--gold-dim);writing-mode:horizontal-tb;}
+  @media (max-width:780px){.scroll-cue{display:none;}}
+
+  /* ---------- Sections generic ---------- */
+  section{position:relative;scroll-margin-top:88px;}
+  .section-pad{padding:130px 0;}
+  @media (max-width:780px){.section-pad{padding:76px 0;}}
+  @media (max-width:480px){.section-pad{padding:64px 0;}}
+  .section-head{max-width:620px;margin-bottom:64px;}
+  @media (max-width:780px){.section-head{margin-bottom:44px;}}
+  .section-head h2{font-size:clamp(28px,4vw,44px);margin:18px 0 20px;color:var(--ivory);}
+  .section-head p{color:var(--ivory-dim);font-size:15.5px;max-width:480px;font-weight:300;}
+  .tag{font-size:13px;color:var(--gold-light);letter-spacing:.3px;}
+
+  /* ---------- About ---------- */
+  .about{background:var(--black);}
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center;}
+  .about-media{position:relative;}
+  .about-media img{width:100%;aspect-ratio:4/5;filter:grayscale(.15) contrast(1.05);}
+  .about-media-frame{
+    position:absolute;top:22px;left:-22px;right:22px;bottom:-22px;
+    border:1px solid var(--gold-dim);z-index:-1;
+  }
+  .about-copy p{color:var(--ivory-dim);font-weight:300;font-size:15.5px;margin-bottom:18px;max-width:460px;}
+  .about-copy h2{font-size:clamp(28px,3.6vw,40px);margin:16px 0 26px;color:var(--ivory);max-width:420px;}
+  .about-stats{display:flex;gap:44px;margin-top:40px;padding-top:32px;border-top:1px solid var(--line);flex-wrap:wrap;}
+  .about-stats div strong{display:block;font-family:var(--ff-display);font-size:30px;color:var(--gold-light);font-weight:500;}
+  .about-stats div span{font-size:12.5px;color:var(--ivory-dim);}
+
+  @media (max-width:920px){
+    .about-grid{grid-template-columns:1fr;gap:56px;}
+    .about-media-frame{display:none;}
+  }
+
+  /* ---------- Services ---------- */
+  .services{background:var(--charcoal);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .service-list{border-top:1px solid var(--line);}
+  .service-row{
+    display:grid;grid-template-columns:1fr auto;gap:8px 24px;align-items:baseline;
+    padding:30px 0;border-bottom:1px solid var(--line);
+    transition:padding-left .4s var(--ease), border-color .4s var(--ease);
+  }
+  .service-row:hover{padding-left:18px;border-color:var(--gold-dim);}
+  .service-name{font-family:var(--ff-display);font-size:23px;color:var(--ivory);font-weight:500;}
+  .service-price{font-family:var(--ff-display);font-size:23px;color:var(--gold-light);font-weight:500;white-space:nowrap;}
+  .service-desc{grid-column:1/2;color:var(--ivory-dim);font-size:14.5px;font-weight:300;max-width:520px;}
+  @media (max-width:600px){
+    .service-row{grid-template-columns:1fr;}
+    .service-price{font-size:18px;}
+  }
+
+  /* ---------- Diferenciais / manifesto ---------- */
+  .manifesto{background:var(--black);text-align:center;padding:150px 0;}
+  .manifesto blockquote{
+    font-family:var(--ff-display);font-size:clamp(26px,4.6vw,52px);
+    max-width:820px;margin:0 auto 64px;color:var(--ivory);font-weight:500;line-height:1.28;
+  }
+  .manifesto blockquote em{color:var(--gold-light);font-style:italic;}
+  .manifesto-points{
+    display:flex;justify-content:center;max-width:920px;margin:0 auto;
+  }
+  .manifesto-point{
+    flex:1;padding:0 32px;border-left:1px solid var(--line);
+  }
+  .manifesto-point:first-child{border-left:none;}
+  .manifesto-point h3{font-size:16px;color:var(--gold-light);font-weight:500;margin-bottom:10px;letter-spacing:.2px;}
+  .manifesto-point p{font-size:13.5px;color:var(--ivory-dim);font-weight:300;}
+  @media (max-width:780px){
+    .manifesto{padding:90px 0;}
+    .manifesto blockquote{margin-bottom:48px;}
+    .manifesto-points{flex-direction:column;gap:32px;}
+    .manifesto-point{border-left:none;border-top:1px solid var(--line);padding:26px 0 0;}
+    .manifesto-point:first-child{border-top:none;}
+  }
+  @media (max-width:480px){
+    .manifesto{padding:72px 0;}
+  }
+
+  /* ---------- Gallery ---------- */
+  .gallery{background:var(--black);}
+  .gallery-grid{
+    display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:120px;gap:14px;
+  }
+  .gallery-item{position:relative;overflow:hidden;grid-column:span 3;}
+  .gallery-item:nth-child(1){grid-row:span 3;}
+  .gallery-item:nth-child(2){grid-row:span 2;grid-column:span 3;}
+  .gallery-item:nth-child(3){grid-row:span 2;grid-column:span 3;}
+  .gallery-item:nth-child(4){grid-row:span 3;}
+  .gallery-item:nth-child(5){grid-row:span 3;grid-column:span 3;}
+  .gallery-item:nth-child(6){grid-row:span 2;grid-column:span 3;}
+  .gallery-item img{width:100%;height:100%;transition:transform .7s var(--ease);filter:grayscale(.25) contrast(1.05);}
+  .gallery-item:hover img{transform:scale(1.06);}
+  .gallery-item::before{
+    content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,10,10,.78) 0%,transparent 50%);
+    opacity:0;transition:opacity .4s;z-index:1;
+  }
+  .gallery-item:hover::before{opacity:1;}
+  .gallery-cap{
+    position:absolute;left:18px;bottom:16px;font-size:13px;color:var(--ivory);
+    opacity:0;transform:translateY(8px);transition:all .4s var(--ease);z-index:2;
+  }
+  .gallery-item:hover .gallery-cap{opacity:1;transform:translateY(0);}
+  @media (max-width:920px) and (min-width:761px){
+    .gallery-grid{grid-template-columns:repeat(4,1fr);grid-auto-rows:160px;}
+    .gallery-item, .gallery-item:nth-child(n){grid-column:span 2;grid-row:span 1;}
+  }
+  @media (max-width:760px){
+    .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px;gap:10px;}
+    .gallery-item, .gallery-item:nth-child(n){grid-column:span 1;grid-row:span 1;}
+  }
+  @media (max-width:420px){
+    .gallery-grid{grid-auto-rows:150px;}
+  }
+
+  /* ---------- Testimonials ---------- */
+  .reviews{background:var(--charcoal);border-top:1px solid var(--line);}
+  .review-track{
+    display:flex;gap:1px;background:var(--line);border:1px solid var(--line);
+    overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-x:contain;
+  }
+  .review-track::-webkit-scrollbar{height:4px;}
+  .review-track::-webkit-scrollbar-thumb{background:var(--gold-dim);}
+  .review-card{
+    background:var(--charcoal);min-width:320px;flex:1 0 320px;padding:40px 36px;scroll-snap-align:start;
+  }
+  .review-stars{color:var(--gold-light);font-size:14px;letter-spacing:3px;margin-bottom:22px;}
+  .review-quote{font-size:15.5px;color:var(--ivory);font-weight:300;margin-bottom:28px;line-height:1.7;}
+  .review-name{font-family:var(--ff-display);font-size:16px;color:var(--ivory);}
+  .review-role{font-size:12.5px;color:var(--ivory-dim);margin-top:2px;}
+
+  /* ---------- CTA ---------- */
+  .cta{
+    position:relative;padding:150px 0;text-align:center;overflow:hidden;isolation:isolate;
+  }
+  @media (max-width:780px){.cta{padding:88px 0;}}
+  @media (max-width:480px){.cta{padding:68px 0;}}
+  .cta-media{position:absolute;inset:0;z-index:-2;}
+  .cta-media img{width:100%;height:100%;filter:grayscale(.4);}
+  .cta-media::after{content:'';position:absolute;inset:0;background:rgba(10,10,10,.88);}
+  .cta h2{font-size:clamp(30px,4.6vw,50px);color:var(--ivory);max-width:640px;margin:0 auto 20px;}
+  .cta p{color:var(--ivory-dim);font-weight:300;max-width:440px;margin:0 auto 44px;font-size:15.5px;}
+  .cta-actions{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;}
+
+  /* ---------- Location ---------- */
+  .location{background:var(--black);}
+  .location-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+  .map-box{
+    position:relative;aspect-ratio:6/5;border:1px solid var(--line);
+    background:
+      linear-gradient(var(--line) 1px, transparent 1px) 0 0/40px 40px,
+      linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0/40px 40px,
+      var(--panel);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .map-pin{display:flex;flex-direction:column;align-items:center;gap:10px;}
+  .map-pin svg{width:30px;height:30px;color:var(--gold);}
+  .map-pin span{font-family:var(--ff-display);font-size:14px;color:var(--ivory-dim);}
+  .loc-list{border-top:1px solid var(--line);}
+  .loc-row{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);}
+  .loc-row svg{width:20px;height:20px;color:var(--gold);flex-shrink:0;margin-top:2px;}
+  .loc-row h4{font-size:14.5px;color:var(--ivory);margin-bottom:5px;font-family:var(--ff-body);font-weight:500;}
+  .loc-row p{font-size:14px;color:var(--ivory-dim);font-weight:300;}
+  @media (max-width:920px){.location-grid{grid-template-columns:1fr;gap:44px;}}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--charcoal);border-top:1px solid var(--line);padding:90px 0 0;}
+  .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:56px;padding-bottom:70px;}
+  .footer-brand p{color:var(--ivory-dim);font-size:14px;font-weight:300;margin-top:18px;max-width:280px;}
+  .footer-col h5{font-size:13.5px;color:var(--ivory);font-weight:500;margin-bottom:20px;}
+  .footer-col ul li{margin-bottom:12px;}
+  .footer-col a{font-size:14px;color:var(--ivory-dim);transition:color .3s;}
+  .footer-col a:hover{color:var(--gold-light);}
+  .footer-social{display:flex;gap:14px;margin-top:20px;}
+  .footer-social a{
+    width:40px;height:40px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
+    transition:border-color .3s, color .3s;color:var(--ivory-dim);
+  }
+  .footer-social a:hover{border-color:var(--gold);color:var(--gold-light);}
+  .footer-social svg{width:15px;height:15px;}
+  .footer-bottom{
+    border-top:1px solid var(--line);padding:26px 0;display:flex;justify-content:space-between;
+    font-size:12.5px;color:var(--ivory-dim);flex-wrap:wrap;gap:10px;
+  }
+  @media (max-width:820px){
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:560px){
+    .footer-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Reveal animation (single orchestrated pattern) ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease), transform .9s var(--ease);}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ---------- Mobile nav ---------- */
+  @media (max-width:920px){
+    nav.primary-nav{
+      position:fixed;inset:0;background:rgba(10,10,10,.98);
+      display:flex;align-items:center;justify-content:center;
+      opacity:0;visibility:hidden;transition:opacity .4s var(--ease);
+      z-index:110;
+      overflow-y:auto;
+      padding:100px 24px 40px;
+    }
+    nav.primary-nav.open{opacity:1;visibility:visible;}
+    nav.primary-nav ul{flex-direction:column;gap:30px;text-align:center;margin:auto 0;}
+    nav.primary-nav a{font-size:19px;}
+    .nav-toggle{display:flex;}
+    .nav-cta-desktop{display:none;}
+  }
+  @media (min-width:921px){
+    nav.primary-nav .mobile-only{display:none;}
+  }
+  @media (max-width:920px){
+    .header-right{gap:16px;}
+  }
+
+  /* ---------- Fine-tuning: small phones ---------- */
+  @media (max-width:480px){
+    .logo-word{font-size:16px;letter-spacing:1px;}
+    .logo-mark{width:28px;height:28px;}
+    .hero{padding-bottom:56px;}
+    .hero-eyebrow{margin-bottom:18px;gap:10px;}
+    .hero-sub{font-size:15.5px;margin-bottom:28px;}
+    .hero-actions{margin-bottom:36px;gap:12px;}
+    .hero-actions .btn{width:100%;justify-content:center;}
+    .hero-trust{gap:22px;padding-top:18px;}
+    .about-stats{gap:26px;}
+    .service-row{padding:22px 0;}
+    .service-name{font-size:19px;}
+    .review-card{padding:30px 22px;min-width:270px;flex-basis:270px;}
+    .cta .btn{width:100%;justify-content:center;}
+    .cta-actions{width:100%;}
+    .location-grid{gap:32px;}
+    .footer-grid{gap:40px;padding-bottom:48px;}
+    footer{padding-top:64px;}
+  }
+
+  /* Prevent any accidental horizontal scroll on small screens */
+  @media (max-width:480px){
+    .wrap, .gallery-grid, .service-row{max-width:100%;}
+  }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap">
+    <a href="#inicio" class="logo">
+      <span class="logo-mark"><span>B</span></span>
+      <span class="logo-word">BLACK<b>WOOD</b></span>
+    </a>
+
+    <div class="header-right">
+      <div class="lang-switch" role="group" aria-label="Language selector / Seletor de idioma">
+        <button type="button" class="lang-btn active" id="langPt" data-lang="pt" lang="pt" aria-pressed="true">PT</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button type="button" class="lang-btn" id="langEn" data-lang="en" lang="en" aria-pressed="false">EN</button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" data-i18n-aria="nav.toggleLabel" aria-label="Abrir menu" aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#inicio" data-i18n="nav.home">Início</a></li>
+          <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="#servicos" data-i18n="nav.services">Serviços</a></li>
+          <li><a href="#galeria" data-i18n="nav.gallery">Galeria</a></li>
+          <li><a href="#avaliacoes" data-i18n="nav.reviews">Avaliações</a></li>
+          <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
+          <li class="mobile-only"><a href="#agendar" class="btn btn--solid" data-i18n="nav.book">Agendar Horário</a></li>
+          <li class="nav-cta-desktop"><a href="#agendar" class="btn btn--solid" data-i18n="nav.book">Agendar Horário</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-media">
+      <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1920&q=75"
+           srcset="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=640&q=75 640w,
+                   https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1024&q=75 1024w,
+                   https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1600&q=75 1600w,
+                   https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1920&q=75 1920w"
+           sizes="100vw"
+           data-i18n-alt="hero.imgAlt" alt="Interior da barbearia Blackwood Barber em tons escuros"
+           loading="eager" fetchpriority="high" decoding="async">
+    </div>
+    <div class="wrap">
+      <div class="hero-content">
+        <div class="hero-eyebrow"><span class="rule"></span> <span data-i18n="hero.eyebrow">Barbearia de alto padrão</span></div>
+        <h1 class="hero-title" data-i18n-html="hero.title">O corte que define<br>o seu <em>caráter</em>.</h1>
+        <p class="hero-sub" data-i18n="hero.sub">Precisão, tradição e um ambiente pensado para o homem que valoriza os detalhes. Bem-vindo à Blackwood Barber.</p>
+        <div class="hero-actions">
+          <a href="#agendar" class="btn btn--solid" data-i18n="nav.book">Agendar Horário</a>
+          <a href="#sobre" class="btn btn--ghost" data-i18n="hero.btnAbout">Conhecer a Barbearia</a>
+        </div>
+        <div class="hero-trust">
+          <div><strong data-i18n="hero.trust1Num">12 anos</strong><span data-i18n="hero.trust1Label">de tradição no ofício</span></div>
+          <div><strong data-i18n="hero.trust2Num">4.9</strong><span data-i18n="hero.trust2Label">avaliação média dos clientes</span></div>
+          <div><strong data-i18n="hero.trust3Num">12.000+</strong><span data-i18n="hero.trust3Label">cortes realizados</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue" data-i18n="hero.scrollCue">ROLE PARA CONHECER</div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about section-pad" id="sobre">
+    <div class="wrap about-grid">
+      <div class="about-media reveal">
+        <div class="about-media-frame"></div>
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&q=75"
+             srcset="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=500&q=75 500w,
+                     https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=75 800w,
+                     https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&q=75 1000w"
+             sizes="(max-width:920px) 90vw, 45vw"
+             data-i18n-alt="about.imgAlt" alt="Barbeiro finalizando um corte masculino com precisão" loading="lazy" decoding="async">
+      </div>
+      <div class="about-copy reveal">
+        <span class="tag" data-i18n="about.tag">Nossa história</span>
+        <h2 data-i18n="about.title">Uma tradição construída cadeira por cadeira.</h2>
+        <p data-i18n="about.p1">A Blackwood Barber nasceu em 2014 do encontro entre a barbearia clássica e uma visão contemporânea de cuidado masculino. Começamos com duas cadeiras de couro e uma convicção: o tempo dedicado a um corte é tão importante quanto o resultado.</p>
+        <p data-i18n="about.p2">Hoje, cada detalhe do espaço — da navalha à iluminação — é escolhido para transformar um simples corte em um ritual. Nossa equipe é formada por barbeiros especializados, constantemente atualizados nas técnicas mais refinadas do ofício.</p>
+        <div class="about-stats">
+          <div><strong>2014</strong><span data-i18n="about.stat1Label">ano de fundação</span></div>
+          <div><strong>8</strong><span data-i18n="about.stat2Label">barbeiros especializados</span></div>
+          <div><strong>12k+</strong><span data-i18n="about.stat3Label">clientes atendidos</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="services section-pad" id="servicos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="tag" data-i18n="services.tag">O que fazemos</span>
+        <h2 data-i18n="services.title">Serviços</h2>
+        <p data-i18n="services.subtitle">Cada serviço é conduzido com técnica apurada e atenção total ao que o seu estilo pede.</p>
+      </div>
+
+      <div class="service-list reveal">
+        <div class="service-row">
+          <span class="service-name" data-i18n="service1.name">Corte Masculino</span>
+          <span class="service-price">R$ 60</span>
+          <span class="service-desc" data-i18n="service1.desc">Corte personalizado com acabamento na navalha, incluindo lavagem e finalização.</span>
+        </div>
+        <div class="service-row">
+          <span class="service-name" data-i18n="service2.name">Corte e Barba</span>
+          <span class="service-price">R$ 95</span>
+          <span class="service-desc" data-i18n="service2.desc">O ritual completo: corte sob medida e barba desenhada com toalha quente.</span>
+        </div>
+        <div class="service-row">
+          <span class="service-name" data-i18n="service3.name">Barba Premium</span>
+          <span class="service-price">R$ 55</span>
+          <span class="service-desc" data-i18n="service3.desc">Modelagem completa com navalha, óleos especiais e toalha quente.</span>
+        </div>
+        <div class="service-row">
+          <span class="service-name" data-i18n="service4.name">Degradê</span>
+          <span class="service-price">R$ 70</span>
+          <span class="service-desc" data-i18n="service4.desc">Técnica de transição perfeita entre os comprimentos, com acabamento preciso.</span>
+        </div>
+        <div class="service-row">
+          <span class="service-name" data-i18n="service5.name">Camuflagem de Barba</span>
+          <span class="service-price">R$ 45</span>
+          <span class="service-desc" data-i18n="service5.desc">Cobertura natural dos fios brancos, com produtos específicos para peles sensíveis.</span>
+        </div>
+        <div class="service-row">
+          <span class="service-name" data-i18n="service6.name">Sobrancelha</span>
+          <span class="service-price">R$ 25</span>
+          <span class="service-desc" data-i18n="service6.desc">Design e alinhamento para complementar a harmonia do rosto.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO / DIFERENCIAIS -->
+  <section class="manifesto">
+    <div class="wrap reveal">
+      <blockquote data-i18n-html="manifesto.quote">Não é apenas um corte.<br>É o seu <em>momento</em>.</blockquote>
+      <div class="manifesto-points">
+        <div class="manifesto-point">
+          <h3 data-i18n="manifesto.point1Title">Atendimento personalizado</h3>
+          <p data-i18n="manifesto.point1Desc">Cada cliente é recebido pelo nome, com um serviço pensado para o seu estilo.</p>
+        </div>
+        <div class="manifesto-point">
+          <h3 data-i18n="manifesto.point2Title">Ambiente exclusivo</h3>
+          <p data-i18n="manifesto.point2Desc">Um espaço desenhado para relaxar — do aroma ao som, tudo é intencional.</p>
+        </div>
+        <div class="manifesto-point">
+          <h3 data-i18n="manifesto.point3Title">Profissionais de elite</h3>
+          <p data-i18n="manifesto.point3Desc">Barbeiros com formação contínua nas técnicas mais atuais do mercado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="gallery section-pad" id="galeria">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="tag" data-i18n="gallery.tag">O espaço</span>
+        <h2 data-i18n="gallery.title">Um ambiente pensado nos mínimos detalhes</h2>
+        <p data-i18n="gallery.subtitle">Da cadeira à iluminação, cada elemento foi escolhido para compor a experiência Blackwood.</p>
+      </div>
+
+      <div class="gallery-grid reveal">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=700&q=75" srcset="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=400&q=75 400w, https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=700&q=75 700w, https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1000&q=75 1000w" sizes="(max-width:760px) 50vw, (max-width:920px) 50vw, 33vw" decoding="async" data-i18n-alt="gallery1.alt" alt="Acabamento de barba com navalha" loading="lazy">
+          <span class="gallery-cap" data-i18n="gallery1.cap">Acabamento na navalha</span>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=700&q=75" srcset="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=400&q=75 400w, https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=700&q=75 700w, https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1000&q=75 1000w" sizes="(max-width:760px) 50vw, (max-width:920px) 50vw, 33vw" decoding="async" data-i18n-alt="gallery2.alt" alt="Ferramentas de barbeiro sobre a bancada" loading="lazy">
+          <span class="gallery-cap" data-i18n="gallery2.cap">Instrumentos de precisão</span>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=700&q=75" srcset="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=400&q=75 400w, https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=700&q=75 700w, https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1000&q=75 1000w" sizes="(max-width:760px) 50vw, (max-width:920px) 50vw, 33vw" decoding="async" data-i18n-alt="gallery3.alt" alt="Cadeira de barbeiro em couro" loading="lazy">
+          <span class="gallery-cap" data-i18n="gallery3.cap">Cadeiras clássicas em couro</span>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?auto=format&fit=crop&w=700&q=75" srcset="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?auto=format&fit=crop&w=400&q=75 400w, https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?auto=format&fit=crop&w=700&q=75 700w, https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?auto=format&fit=crop&w=1000&q=75 1000w" sizes="(max-width:760px) 50vw, (max-width:920px) 50vw, 33vw" decoding="async" data-i18n-alt="gallery4.alt" alt="Cliente recebendo corte de cabelo" loading="lazy">
+          <span class="gallery-cap" data-i18n="gallery4.cap">Corte sob medida</span>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=700&q=75" srcset="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=400&q=75 400w, https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=700&q=75 700w, https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=1000&q=75 1000w" sizes="(max-width:760px) 50vw, (max-width:920px) 50vw, 33vw" decoding="async" data-i18n-alt="gallery5.alt" alt="Interior da barbearia com iluminação ambiente" loading="lazy">
+          <span class="gallery-cap" data-i18n="gallery5.cap">Ambiente Blackwood</span>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&w=700&q=75" srcset="https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&w=400&q=75 400w, https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&w=700&q=75 700w, https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&w=1000&q=75 1000w" sizes="(max-width:760px) 50vw, (max-width:920px) 50vw, 33vw" decoding="async" data-i18n-alt="gallery6.alt" alt="Barbeiro trabalhando com atenção aos detalhes" loading="lazy">
+          <span class="gallery-cap" data-i18n="gallery6.cap">Atenção a cada detalhe</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVALIAÇÕES -->
+  <section class="reviews section-pad" id="avaliacoes">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="tag" data-i18n="reviews.tag">Depoimentos</span>
+        <h2 data-i18n="reviews.title">O que dizem nossos clientes</h2>
+        <p data-i18n="reviews.subtitle">Avaliações de demonstração — ilustram a experiência que buscamos entregar todos os dias.</p>
+      </div>
+    </div>
+    <div class="wrap reveal">
+      <div class="review-track">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote" data-i18n="review1.quote">Ambiente impecável e um corte que realmente entendeu o que eu pedi. Virei cliente fixo depois da primeira visita.</p>
+          <div class="review-name">Rafael Moraes</div>
+          <div class="review-role" data-i18n="review1.role">Cliente desde 2021</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote" data-i18n="review2.quote">A barba premium é outro nível. Toalha quente, atenção aos detalhes e um resultado que dura semanas.</p>
+          <div class="review-name">Diego Fontoura</div>
+          <div class="review-role" data-i18n="review2.role">Cliente desde 2019</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote" data-i18n="review3.quote">Não é só uma barbearia, é uma pausa na rotina. O atendimento faz toda a diferença.</p>
+          <div class="review-name">Thiago Andrade</div>
+          <div class="review-role" data-i18n="review3.role">Cliente desde 2022</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote" data-i18n="review4.quote">Profissionais muito bem treinados. O degradê ficou exatamente como eu imaginei.</p>
+          <div class="review-name">Marcelo Lima</div>
+          <div class="review-role" data-i18n="review4.role">Cliente desde 2020</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="agendar">
+    <div class="cta-media">
+      <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1600&q=75"
+           srcset="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=640&q=75 640w,
+                   https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1024&q=75 1024w,
+                   https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1600&q=75 1600w"
+           sizes="100vw"
+           data-i18n-alt="cta.mediaAlt" alt="Bancada de ferramentas de barbeiro" loading="lazy" decoding="async">
+    </div>
+    <div class="wrap reveal">
+      <span class="tag" data-i18n="cta.tag">Reserve seu horário</span>
+      <h2 data-i18n="cta.title">Pronto para renovar o seu estilo?</h2>
+      <p data-i18n="cta.subtitle">Escolha o melhor horário para você. Nossa equipe está pronta para receber você com toda a atenção que você merece.</p>
+      <div class="cta-actions">
+        <a href="https://wa.me/5545999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Blackwood%20Barber." target="_blank" rel="noopener" class="btn btn--solid" id="waBtn" data-i18n="cta.btnWhatsapp">Agendar pelo WhatsApp</a>
+        <a href="#contato" class="btn btn--ghost" data-i18n="cta.btnLocation">Ver localização</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO -->
+  <section class="location section-pad" id="contato">
+    <div class="wrap location-grid">
+      <div class="map-box reveal">
+        <div class="map-pin">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s7-7.2 7-12a7 7 0 10-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg>
+          <span>Rua das Palmeiras, 482</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="tag" data-i18n="location.tag">Visite-nos</span>
+        <h2 style="font-size:clamp(28px,3.6vw,38px);margin:16px 0 8px;color:var(--ivory);" data-i18n="location.title">Onde nos encontrar</h2>
+        <div class="loc-list">
+          <div class="loc-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s7-7.2 7-12a7 7 0 10-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg>
+            <div><h4 data-i18n="loc.addressTitle">Endereço</h4><p>Rua das Palmeiras, 482 — Centro, Curitiba – PR</p></div>
+          </div>
+          <div class="loc-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            <div><h4 data-i18n="loc.hoursTitle">Horário de funcionamento</h4><p data-i18n-html="loc.hoursText">Segunda a sexta: 09h – 20h &nbsp;·&nbsp; Sábado: 09h – 18h &nbsp;·&nbsp; Domingo: fechado</p></div>
+          </div>
+          <div class="loc-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2.1.7 3a2 2 0 01-.5 2.1L8 10.1a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c1 .3 2 .6 3 .7a2 2 0 011.6 2z"/></svg>
+            <div><h4 data-i18n="loc.phoneTitle">Telefone / WhatsApp</h4><p>(45) 99999-9999</p></div>
+          </div>
+          <div class="loc-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>
+            <div><h4 data-i18n="loc.emailTitle">E-mail</h4><p>contato@blackwoodbarber.com.br</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#inicio" class="logo">
+          <span class="logo-mark"><span>B</span></span>
+          <span class="logo-word">BLACK<b>WOOD</b></span>
+        </a>
+        <p data-i18n="footer.brandDesc">Barbearia masculina de alto padrão. Precisão, tradição e um ambiente feito para o seu momento.</p>
+        <div class="footer-social">
+          <a href="#" class="social-placeholder" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg></a>
+          <a href="#" class="social-placeholder" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 9h3V5h-3a4 4 0 00-4 4v2H7v4h3v7h4v-7h3l1-4h-4V9a1 1 0 011-1z"/></svg></a>
+          <a href="#" class="social-placeholder" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 3v11.5a3.5 3.5 0 11-3-3.46"/><path d="M14 3c.3 2.3 2 4 4.5 4.2V10c-1.7 0-3.2-.5-4.5-1.4"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5 data-i18n="footer.navTitle">Navegação</h5>
+        <ul>
+          <li><a href="#inicio" data-i18n="nav.home">Início</a></li>
+          <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="#servicos" data-i18n="nav.services">Serviços</a></li>
+          <li><a href="#galeria" data-i18n="nav.gallery">Galeria</a></li>
+          <li><a href="#avaliacoes" data-i18n="nav.reviews">Avaliações</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 data-i18n="footer.servicesTitle">Serviços</h5>
+        <ul>
+          <li><a href="#servicos" data-i18n="service1.name">Corte Masculino</a></li>
+          <li><a href="#servicos" data-i18n="service2.name">Corte e Barba</a></li>
+          <li><a href="#servicos" data-i18n="service3.name">Barba Premium</a></li>
+          <li><a href="#servicos" data-i18n="service4.name">Degradê</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 data-i18n="footer.contactTitle">Contato</h5>
+        <ul>
+          <li><a href="#contato">Rua das Palmeiras, 482 — Curitiba, PR</a></li>
+          <li><a href="tel:+5545999999999">(45) 99999-9999</a></li>
+          <li><a href="mailto:contato@blackwoodbarber.com.br">contato@blackwoodbarber.com.br</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span data-i18n="footer.copyright">© 2026 Blackwood Barber. Todos os direitos reservados.</span>
+      <span data-i18n="footer.credit">Site demonstrativo desenvolvido por Eduardo Padilha</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ---------- i18n ----------
+  const translations = {
+    pt: {
+      'meta.title': 'Blackwood Barber — Barbearia de Alto Padrão',
+      'meta.description': 'Blackwood Barber: barbearia masculina de alto padrão. Cortes, barba e cuidado pessoal com precisão, tradição e um ambiente exclusivo.',
+      'meta.keywords': 'barbearia, barbearia masculina, corte masculino, barba, barbearia premium',
+      'meta.ogDescription': 'Não é apenas um corte. É o seu momento.',
+      'nav.home': 'Início', 'nav.about': 'Sobre', 'nav.services': 'Serviços', 'nav.gallery': 'Galeria',
+      'nav.reviews': 'Avaliações', 'nav.contact': 'Contato', 'nav.book': 'Agendar Horário', 'nav.toggleLabel': 'Abrir menu',
+      'hero.eyebrow': 'Barbearia de alto padrão',
+      'hero.title': 'O corte que define<br>o seu <em>caráter</em>.',
+      'hero.sub': 'Precisão, tradição e um ambiente pensado para o homem que valoriza os detalhes. Bem-vindo à Blackwood Barber.',
+      'hero.btnAbout': 'Conhecer a Barbearia',
+      'hero.trust1Num': '12 anos', 'hero.trust1Label': 'de tradição no ofício',
+      'hero.trust2Num': '4,9', 'hero.trust2Label': 'avaliação média dos clientes',
+      'hero.trust3Num': '12.000+', 'hero.trust3Label': 'cortes realizados',
+      'hero.scrollCue': 'ROLE PARA CONHECER',
+      'hero.imgAlt': 'Interior da barbearia Blackwood Barber em tons escuros',
+      'about.tag': 'Nossa história',
+      'about.title': 'Uma tradição construída cadeira por cadeira.',
+      'about.p1': 'A Blackwood Barber nasceu em 2014 do encontro entre a barbearia clássica e uma visão contemporânea de cuidado masculino. Começamos com duas cadeiras de couro e uma convicção: o tempo dedicado a um corte é tão importante quanto o resultado.',
+      'about.p2': 'Hoje, cada detalhe do espaço — da navalha à iluminação — é escolhido para transformar um simples corte em um ritual. Nossa equipe é formada por barbeiros especializados, constantemente atualizados nas técnicas mais refinadas do ofício.',
+      'about.stat1Label': 'ano de fundação', 'about.stat2Label': 'barbeiros especializados', 'about.stat3Label': 'clientes atendidos',
+      'about.imgAlt': 'Barbeiro finalizando um corte masculino com precisão',
+      'services.tag': 'O que fazemos', 'services.title': 'Serviços',
+      'services.subtitle': 'Cada serviço é conduzido com técnica apurada e atenção total ao que o seu estilo pede.',
+      'service1.name': 'Corte Masculino', 'service1.desc': 'Corte personalizado com acabamento na navalha, incluindo lavagem e finalização.',
+      'service2.name': 'Corte e Barba', 'service2.desc': 'O ritual completo: corte sob medida e barba desenhada com toalha quente.',
+      'service3.name': 'Barba Premium', 'service3.desc': 'Modelagem completa com navalha, óleos especiais e toalha quente.',
+      'service4.name': 'Degradê', 'service4.desc': 'Técnica de transição perfeita entre os comprimentos, com acabamento preciso.',
+      'service5.name': 'Camuflagem de Barba', 'service5.desc': 'Cobertura natural dos fios brancos, com produtos específicos para peles sensíveis.',
+      'service6.name': 'Sobrancelha', 'service6.desc': 'Design e alinhamento para complementar a harmonia do rosto.',
+      'manifesto.quote': 'Não é apenas um corte.<br>É o seu <em>momento</em>.',
+      'manifesto.point1Title': 'Atendimento personalizado', 'manifesto.point1Desc': 'Cada cliente é recebido pelo nome, com um serviço pensado para o seu estilo.',
+      'manifesto.point2Title': 'Ambiente exclusivo', 'manifesto.point2Desc': 'Um espaço desenhado para relaxar — do aroma ao som, tudo é intencional.',
+      'manifesto.point3Title': 'Profissionais de elite', 'manifesto.point3Desc': 'Barbeiros com formação contínua nas técnicas mais atuais do mercado.',
+      'gallery.tag': 'O espaço', 'gallery.title': 'Um ambiente pensado nos mínimos detalhes',
+      'gallery.subtitle': 'Da cadeira à iluminação, cada elemento foi escolhido para compor a experiência Blackwood.',
+      'gallery1.alt': 'Acabamento de barba com navalha', 'gallery1.cap': 'Acabamento na navalha',
+      'gallery2.alt': 'Ferramentas de barbeiro sobre a bancada', 'gallery2.cap': 'Instrumentos de precisão',
+      'gallery3.alt': 'Cadeira de barbeiro em couro', 'gallery3.cap': 'Cadeiras clássicas em couro',
+      'gallery4.alt': 'Cliente recebendo corte de cabelo', 'gallery4.cap': 'Corte sob medida',
+      'gallery5.alt': 'Interior da barbearia com iluminação ambiente', 'gallery5.cap': 'Ambiente Blackwood',
+      'gallery6.alt': 'Barbeiro trabalhando com atenção aos detalhes', 'gallery6.cap': 'Atenção a cada detalhe',
+      'reviews.tag': 'Depoimentos', 'reviews.title': 'O que dizem nossos clientes',
+      'reviews.subtitle': 'Avaliações de demonstração — ilustram a experiência que buscamos entregar todos os dias.',
+      'review1.quote': 'Ambiente impecável e um corte que realmente entendeu o que eu pedi. Virei cliente fixo depois da primeira visita.', 'review1.role': 'Cliente desde 2021',
+      'review2.quote': 'A barba premium é outro nível. Toalha quente, atenção aos detalhes e um resultado que dura semanas.', 'review2.role': 'Cliente desde 2019',
+      'review3.quote': 'Não é só uma barbearia, é uma pausa na rotina. O atendimento faz toda a diferença.', 'review3.role': 'Cliente desde 2022',
+      'review4.quote': 'Profissionais muito bem treinados. O degradê ficou exatamente como eu imaginei.', 'review4.role': 'Cliente desde 2020',
+      'cta.tag': 'Reserve seu horário', 'cta.title': 'Pronto para renovar o seu estilo?',
+      'cta.subtitle': 'Escolha o melhor horário para você. Nossa equipe está pronta para receber você com toda a atenção que você merece.',
+      'cta.btnWhatsapp': 'Agendar pelo WhatsApp', 'cta.btnLocation': 'Ver localização',
+      'cta.mediaAlt': 'Bancada de ferramentas de barbeiro',
+      'cta.waMessage': 'Olá! Gostaria de agendar um horário na Blackwood Barber.',
+      'location.tag': 'Visite-nos', 'location.title': 'Onde nos encontrar',
+      'loc.addressTitle': 'Endereço', 'loc.hoursTitle': 'Horário de funcionamento',
+      'loc.hoursText': 'Segunda a sexta: 09h – 20h &nbsp;·&nbsp; Sábado: 09h – 18h &nbsp;·&nbsp; Domingo: fechado',
+      'loc.phoneTitle': 'Telefone / WhatsApp', 'loc.emailTitle': 'E-mail',
+      'footer.brandDesc': 'Barbearia masculina de alto padrão. Precisão, tradição e um ambiente feito para o seu momento.',
+      'footer.navTitle': 'Navegação', 'footer.servicesTitle': 'Serviços', 'footer.contactTitle': 'Contato',
+      'footer.copyright': '© 2026 Blackwood Barber. Todos os direitos reservados.',
+      'footer.credit': 'Site demonstrativo desenvolvido por Eduardo Padilha'
+    },
+    en: {
+      'meta.title': 'Blackwood Barber — Premium Men\u2019s Barbershop',
+      'meta.description': 'Blackwood Barber: a premium men\u2019s barbershop. Haircuts, beard care and grooming with precision, tradition and an exclusive atmosphere.',
+      'meta.keywords': 'barbershop, men\u2019s barbershop, men\u2019s haircut, beard, premium barbershop',
+      'meta.ogDescription': 'It\u2019s not just a haircut. It\u2019s your moment.',
+      'nav.home': 'Home', 'nav.about': 'About', 'nav.services': 'Services', 'nav.gallery': 'Gallery',
+      'nav.reviews': 'Reviews', 'nav.contact': 'Contact', 'nav.book': 'Book Appointment', 'nav.toggleLabel': 'Open menu',
+      'hero.eyebrow': 'Premium Men\u2019s Barbershop',
+      'hero.title': 'The cut that defines<br>your <em>character</em>.',
+      'hero.sub': 'Precision, tradition and a space designed for the man who values the details. Welcome to Blackwood Barber.',
+      'hero.btnAbout': 'Discover the Barbershop',
+      'hero.trust1Num': '12 years', 'hero.trust1Label': 'of dedicated craftsmanship',
+      'hero.trust2Num': '4.9', 'hero.trust2Label': 'average client rating',
+      'hero.trust3Num': '12,000+', 'hero.trust3Label': 'cuts delivered',
+      'hero.scrollCue': 'SCROLL TO EXPLORE',
+      'hero.imgAlt': 'Interior of Blackwood Barber in moody dark tones',
+      'about.tag': 'Our Story',
+      'about.title': 'A tradition built one chair at a time.',
+      'about.p1': 'Blackwood Barber was born in 2014 from the meeting of classic barbering and a contemporary vision of men\u2019s grooming. We started with two leather chairs and one conviction: the time devoted to a cut matters as much as the result.',
+      'about.p2': 'Today, every detail of the space — from the razor to the lighting — is chosen to turn a simple haircut into a ritual. Our team is made up of specialized barbers, continually trained in the craft\u2019s most refined techniques.',
+      'about.stat1Label': 'founding year', 'about.stat2Label': 'specialized barbers', 'about.stat3Label': 'clients served',
+      'about.imgAlt': 'Barber finishing a men\u2019s haircut with precision',
+      'services.tag': 'What We Do', 'services.title': 'Services',
+      'services.subtitle': 'Every service is delivered with refined technique and full attention to what your style calls for.',
+      'service1.name': 'Men\u2019s Haircut', 'service1.desc': 'Personalized haircut with razor finish, including wash and styling.',
+      'service2.name': 'Haircut & Beard', 'service2.desc': 'The complete ritual: a tailored haircut and beard shaping with a hot towel.',
+      'service3.name': 'Premium Beard', 'service3.desc': 'Full shaping with straight razor, specialty oils and a hot towel.',
+      'service4.name': 'Fade', 'service4.desc': 'A seamless blending technique between lengths, with precise finishing.',
+      'service5.name': 'Beard Camouflage', 'service5.desc': 'Natural coverage of grey hairs, using products formulated for sensitive skin.',
+      'service6.name': 'Eyebrow Grooming', 'service6.desc': 'Shaping and alignment to complement facial harmony.',
+      'manifesto.quote': 'It\u2019s not just a haircut.<br>It\u2019s your <em>moment</em>.',
+      'manifesto.point1Title': 'Personalized Service', 'manifesto.point1Desc': 'Every client is welcomed by name, with a service tailored to their style.',
+      'manifesto.point2Title': 'Exclusive Atmosphere', 'manifesto.point2Desc': 'A space designed to help you unwind — from the scent to the sound, every detail is intentional.',
+      'manifesto.point3Title': 'Elite Professionals', 'manifesto.point3Desc': 'Barbers with ongoing training in the industry\u2019s most current techniques.',
+      'gallery.tag': 'The Space', 'gallery.title': 'A space designed down to the smallest detail',
+      'gallery.subtitle': 'From the chair to the lighting, every element was chosen to shape the Blackwood experience.',
+      'gallery1.alt': 'Beard finishing with a straight razor', 'gallery1.cap': 'Straight razor finish',
+      'gallery2.alt': 'Barber tools laid out on the counter', 'gallery2.cap': 'Precision instruments',
+      'gallery3.alt': 'Leather barber chair', 'gallery3.cap': 'Classic leather chairs',
+      'gallery4.alt': 'Client receiving a haircut', 'gallery4.cap': 'Tailored haircut',
+      'gallery5.alt': 'Barbershop interior with ambient lighting', 'gallery5.cap': 'The Blackwood atmosphere',
+      'gallery6.alt': 'Barber working with close attention to detail', 'gallery6.cap': 'Attention to every detail',
+      'reviews.tag': 'Testimonials', 'reviews.title': 'What our clients say',
+      'reviews.subtitle': 'Sample reviews for demonstration — illustrating the experience we aim to deliver every day.',
+      'review1.quote': 'Impeccable atmosphere and a haircut that truly understood what I asked for. I became a regular after my first visit.', 'review1.role': 'Client since 2021',
+      'review2.quote': 'The premium beard service is next level. Hot towel, attention to detail and results that last for weeks.', 'review2.role': 'Client since 2019',
+      'review3.quote': 'It\u2019s not just a barbershop, it\u2019s a break from the routine. The service makes all the difference.', 'review3.role': 'Client since 2022',
+      'review4.quote': 'Highly skilled professionals. The fade came out exactly as I pictured it.', 'review4.role': 'Client since 2020',
+      'cta.tag': 'Book Your Slot', 'cta.title': 'Ready to renew your style?',
+      'cta.subtitle': 'Choose the time that works best for you. Our team is ready to welcome you with all the attention you deserve.',
+      'cta.btnWhatsapp': 'Book via WhatsApp', 'cta.btnLocation': 'View Location',
+      'cta.mediaAlt': 'Barber tools laid out on a counter',
+      'cta.waMessage': 'Hi! I\u2019d like to book an appointment at Blackwood Barber.',
+      'location.tag': 'Visit Us', 'location.title': 'Where to find us',
+      'loc.addressTitle': 'Address', 'loc.hoursTitle': 'Business Hours',
+      'loc.hoursText': 'Monday to Friday: 9am – 8pm &nbsp;·&nbsp; Saturday: 9am – 6pm &nbsp;·&nbsp; Sunday: closed',
+      'loc.phoneTitle': 'Phone / WhatsApp', 'loc.emailTitle': 'Email',
+      'footer.brandDesc': 'A premium men\u2019s barbershop. Precision, tradition and a space made for your moment.',
+      'footer.navTitle': 'Navigation', 'footer.servicesTitle': 'Services', 'footer.contactTitle': 'Contact',
+      'footer.copyright': '© 2026 Blackwood Barber. All rights reserved.',
+      'footer.credit': 'Demo website developed by Eduardo Padilha'
+    }
+  };
+
+  const STORAGE_KEY = 'blackwood-lang';
+  const htmlEls = document.querySelectorAll('[data-i18n-html]');
+  const textEls = document.querySelectorAll('[data-i18n]');
+  const altEls = document.querySelectorAll('[data-i18n-alt]');
+  const ariaEls = document.querySelectorAll('[data-i18n-aria]');
+  const langBtns = document.querySelectorAll('.lang-btn');
+  const waBtn = document.getElementById('waBtn');
+  const WA_NUMBER = '5545999999999';
+
+  function applyLanguage(lang){
+    const dict = translations[lang] || translations.pt;
+
+    textEls.forEach(el => { const key = el.getAttribute('data-i18n'); if (dict[key] !== undefined) el.textContent = dict[key]; });
+    htmlEls.forEach(el => { const key = el.getAttribute('data-i18n-html'); if (dict[key] !== undefined) el.innerHTML = dict[key]; });
+    altEls.forEach(el => { const key = el.getAttribute('data-i18n-alt'); if (dict[key] !== undefined) el.setAttribute('alt', dict[key]); });
+    ariaEls.forEach(el => { const key = el.getAttribute('data-i18n-aria'); if (dict[key] !== undefined) el.setAttribute('aria-label', dict[key]); });
+
+    document.title = dict['meta.title'];
+    const setMeta = (selector, value) => { const el = document.querySelector(selector); if (el && value !== undefined) el.setAttribute('content', value); };
+    setMeta('meta[name="description"]', dict['meta.description']);
+    setMeta('meta[name="keywords"]', dict['meta.keywords']);
+    setMeta('meta[property="og:title"]', dict['meta.title']);
+    setMeta('meta[property="og:description"]', dict['meta.ogDescription']);
+    setMeta('meta[property="og:locale"]', lang === 'en' ? 'en_US' : 'pt_BR');
+
+    if (waBtn) {
+      waBtn.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(dict['cta.waMessage']);
+    }
+
+    document.documentElement.lang = (lang === 'en') ? 'en' : 'pt-BR';
+
+    langBtns.forEach(btn => {
+      const isActive = btn.getAttribute('data-lang') === lang;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-pressed', isActive);
+    });
+
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch(e) {}
+  }
+
+  langBtns.forEach(btn => {
+    btn.addEventListener('click', () => applyLanguage(btn.getAttribute('data-lang')));
+  });
+
+  let initialLang = 'pt';
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved === 'pt' || saved === 'en') initialLang = saved;
+  } catch(e) {}
+  applyLanguage(initialLang);
+
+  // Header scroll state
+  const header = document.getElementById('siteHeader');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  // Mobile nav toggle (robust scroll-lock: overflow:hidden alone is unreliable on iOS Safari,
+  // so we pin the body with position:fixed and restore the exact scroll position on close)
+  const navToggle = document.getElementById('navToggle');
+  const primaryNav = document.getElementById('primaryNav');
+  let lockedScrollY = 0;
+
+  function lockScroll(){
+    lockedScrollY = window.scrollY || window.pageYOffset || 0;
+    document.body.style.position = 'fixed';
+    document.body.style.top = (-lockedScrollY) + 'px';
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+  }
+  function unlockScroll(){
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
+    window.scrollTo(0, lockedScrollY);
+  }
+  function openMenu(){
+    primaryNav.classList.add('open');
+    navToggle.classList.add('open');
+    navToggle.setAttribute('aria-expanded', 'true');
+    lockScroll();
+  }
+  function closeMenu(){
+    if (!primaryNav.classList.contains('open')) return;
+    primaryNav.classList.remove('open');
+    navToggle.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    unlockScroll();
+  }
+
+  navToggle.addEventListener('click', () => {
+    if (primaryNav.classList.contains('open')) { closeMenu(); } else { openMenu(); }
+  });
+  primaryNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+  // Tap on the dark backdrop (outside the nav links) also closes the menu
+  primaryNav.addEventListener('click', (e) => {
+    if (e.target === primaryNav) closeMenu();
+  });
+  // Escape key closes the menu (keyboard users)
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+  // Safety net: if the viewport is resized past the mobile breakpoint while the menu is open, unlock
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 920 && primaryNav.classList.contains('open')) closeMenu();
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.15});
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+
+  // Footer social icons are fictitious placeholders (demo project) — avoid a confusing jump-to-top on click
+  document.querySelectorAll('.social-placeholder').forEach(link => {
+    link.addEventListener('click', (e) => e.preventDefault());
+  });
+
+  // Graceful fallback for broken images (keeps layout intact, no broken-image icons)
+  document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('error', function handler(){
+      this.removeEventListener('error', handler);
+      this.style.background = 'linear-gradient(135deg, #1b1a17, #0a0a0a)';
+      this.style.minHeight = '100%';
+      this.src = 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'600\'%3E%3Crect width=\'800\' height=\'600\' fill=\'%23151412\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' font-family=\'Georgia\' font-size=\'22\' fill=\'%23b08d57\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3EBLACKWOOD BARBER%3C/text%3E%3C/svg%3E';
+    }, {once:true});
+  });
+})();
+</script>
+
+</body>
+</html>
